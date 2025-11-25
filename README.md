@@ -2,19 +2,139 @@
 
 Collection of shell scripts and utilities for Linux system administration, security, and maintenance.
 
-## 🚧 Coming Soon
+## Scripts Included
 
-This repository is under development. Linux administration tools will be added here.
+### RHELSysDr.sh ⭐ (Red Hat Optimized)
+Interactive system health checker and repair tool **optimized for RHEL/CentOS/Rocky/AlmaLinux**. Similar to Windows DISM/SFC but for Red Hat-based systems.
+
+**RHEL-Specific Features:**
+- Subscription Manager status checking
+- SELinux status and denial monitoring
+- Firewalld configuration checking
+- YUM/DNF repository health
+- Kernel update detection
+- Security update detection and application
+- Duplicate package detection and removal
+- Old kernel cleanup
+
+**Features:**
+- Interactive menu-driven interface
+- Color-coded output (errors, warnings, success)
+- Comprehensive logging to /var/log/rhel-sysdr/
+- Package system health checks and repairs
+- Disk space and SMART health monitoring
+- Service status checking and auto-restart
+- System log analysis
+- Memory usage monitoring
+
+**Checks Performed:**
+- ✅ Red Hat subscription status
+- ✅ Repository connectivity and health
+- ✅ SELinux status and denials
+- ✅ Firewalld/iptables configuration
+- ✅ Kernel version and available updates
+- ✅ Package database integrity
+- ✅ Duplicate and orphaned packages
+- ✅ Security updates available
+- ✅ Failed systemd services
+- ✅ Disk space and inode usage
+- ✅ SMART disk health
+- ✅ Memory and swap usage
+- ✅ System log errors
+
+**Repairs Available:**
+- 🔧 Rebuild RPM database
+- 🔧 Remove duplicate packages
+- 🔧 Fix broken dependencies
+- 🔧 Restart failed services
+- 🔧 Clean package cache
+- 🔧 Remove old kernels
+- 🔧 Apply security updates
+- 🔧 Clean up logs and temp files
+
+**Usage:**
+```bash
+sudo bash RHELSysDr.sh
+```
+
+**Interactive Menu:**
+```
+Health Checks:
+  1) Run full system health check
+  2) Check subscription & repositories
+  3) Check SELinux status
+  4) Check firewall configuration
+  5) Check package system
+  6) Check disk space & health
+  7) Check services
+  8) Check kernel status
+
+Repairs:
+  9) Repair package system issues
+ 10) Restart failed services
+ 11) Clean up disk space
+ 12) Apply security updates
+
+Quick Actions:
+ 13) Run all checks and repairs (recommended)
+```
+
+---
+
+### LinuxSystemDoctor.sh (Generic Linux)
+Interactive system health checker and repair tool for general Linux systems (Ubuntu, Debian, Fedora, etc.).
+
+**Features:**
+- Interactive menu-driven interface
+- Multi-distribution support (Ubuntu/Debian, RHEL/CentOS/Fedora)
+- Package system health checks and repairs
+- Disk space and health monitoring (SMART)
+- Service status checking and auto-restart
+- System log analysis
+- Memory usage monitoring
+- Automatic cleanup of logs and caches
+- Color-coded output for easy reading
+- Comprehensive logging
+
+**Checks Performed:**
+- ✅ Disk space and inode usage
+- ✅ Package database integrity
+- ✅ Broken package dependencies
+- ✅ Failed systemd services
+- ✅ System log errors
+- ✅ Memory and swap usage
+- ✅ Disk SMART health status
+
+**Repairs Available:**
+- 🔧 Fix broken package dependencies
+- 🔧 Repair package database corruption
+- 🔧 Restart failed services
+- 🔧 Clean up disk space (logs, cache, temp files)
+
+**Usage:**
+```bash
+sudo bash LinuxSystemDoctor.sh
+```
+
+**Interactive Menu Options:**
+1. Run full system health check
+2. Check package system only
+3. Check disk space and health
+4. Check services
+5. Check system logs
+6. Repair package system issues
+7. Restart failed services
+8. Clean up disk space
+9. Run all checks and repairs (recommended)
 
 ## Planned Tools
 
-- System health check scripts
 - Security hardening automation
 - Log analysis utilities
 - Backup and recovery tools
 - Performance monitoring scripts
 - User management utilities
-- Package management helpers
+- STIG compliance checker (similar to macOS version)
 
 ## Contributing
 
