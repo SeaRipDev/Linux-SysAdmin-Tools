@@ -81,6 +81,90 @@ Quick Actions:
 
 ---
 
+### FedoraSysDr.sh ⭐ (Fedora Optimized)
+Interactive system health checker and maintenance tool **optimized for Fedora Workstation and Server**.
+
+**Fedora-Specific Features:**
+- DNF package manager health and updates
+- Flatpak application management and updates
+- Firmware updates via fwupd
+- Fedora version and EOL status checking
+- RPM Fusion repository detection
+- zram swap detection
+- systemd-resolved checking
+- SELinux status and denial monitoring
+- Firewalld configuration checking
+
+**Features:**
+- Interactive menu-driven interface
+- Color-coded output (errors, warnings, success)
+- Comprehensive logging to /var/log/fedora-sysdr/
+- Package system health checks and repairs
+- Disk space and SMART health monitoring
+- Service status checking and auto-restart
+- System log analysis
+- Memory usage monitoring
+
+**Checks Performed:**
+- ✅ Fedora version and EOL status
+- ✅ DNF repository connectivity and health
+- ✅ SELinux status and denials
+- ✅ Firewalld configuration
+- ✅ Kernel version and available updates
+- ✅ Package database integrity
+- ✅ Duplicate packages
+- ✅ Failed systemd services
+- ✅ Disk space and inode usage
+- ✅ SMART disk health
+- ✅ Memory and swap usage (including zram)
+- ✅ System log errors
+- ✅ Flatpak applications and updates
+- ✅ Firmware update availability
+
+**Updates & Repairs Available:**
+- 🔧 Update system packages (DNF)
+- 🔧 Update Flatpak applications
+- 🔧 Update firmware (fwupd)
+- 🔧 Rebuild RPM database
+- 🔧 Remove duplicate packages
+- 🔧 Restart failed services
+- 🔧 Clean DNF cache
+- 🔧 Clean up logs and temp files
+
+**Usage:**
+```bash
+sudo bash FedoraSysDr.sh
+```
+
+**Interactive Menu:**
+```
+Health Checks:
+  1) Run full system health check
+  2) Check Fedora version & EOL status
+  3) Check DNF repositories
+  4) Check SELinux status
+  5) Check firewall configuration
+  6) Check package system
+  7) Check disk space & health
+  8) Check services
+  9) Check kernel status
+ 10) Check Flatpak status
+ 11) Check firmware status
+
+Updates & Repairs:
+ 12) Update system packages (DNF)
+ 13) Update Flatpak applications
+ 14) Update firmware (fwupd)
+ 15) Repair package system issues
+ 16) Restart failed services
+ 17) Clean up disk space
+
+Quick Actions:
+ 18) Run all checks and updates (recommended)
+```
+
+---
+
 ### LinuxSystemDoctor.sh (Generic Linux)
 Interactive system health checker and repair tool for general Linux systems (Ubuntu, Debian, Fedora, etc.).
 
@@ -149,14 +233,14 @@ Have a useful Linux admin script? Contributions are welcome!
 ## Installation
 
 ```bash
-git clone https://github.com/SeaDubRip/Linux-SysAdmin-Tools.git
+git clone https://github.com/SeaRipDev/Linux-SysAdmin-Tools.git
 cd Linux-SysAdmin-Tools
 chmod +x *.sh
 ```
 
 ## Author
 
-CWRip / SeaDubRip
+SeaRipDev
 
 ## License
 
