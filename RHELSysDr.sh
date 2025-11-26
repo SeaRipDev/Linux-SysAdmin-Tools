@@ -8,7 +8,7 @@
 #
 # Usage: sudo bash RHELSysDr.sh
 #
-# Author: CWRip / SeaDubRip
+# Author: SeaRipDev
 # Version: 1.0
 # Date: 2025-11-25
 #

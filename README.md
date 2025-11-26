@@ -165,7 +165,7 @@ Quick Actions:
 
 ---
 
-### LinuxSystemDoctor.sh (Generic Linux)
+### LinuxSysDr.sh (Generic Linux)
 Interactive system health checker and repair tool for general Linux systems (Ubuntu, Debian, Fedora, etc.).
 
 **Features:**
@@ -197,7 +197,7 @@ Interactive system health checker and repair tool for general Linux systems (Ubu
 
 **Usage:**
 ```bash
-sudo bash LinuxSystemDoctor.sh
+sudo bash LinuxSysDr.sh
 ```
 
 **Interactive Menu Options:**

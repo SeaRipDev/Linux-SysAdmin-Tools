@@ -1,14 +1,14 @@
 #!/bin/bash
 ####################################################################################################
 #
-# Linux System Doctor - Interactive System Health Check and Repair
+# LinuxSysDr - Interactive System Health Check and Repair
 #
 # Purpose: Diagnose and repair common Linux system issues
 # Similar to Windows DISM/SFC for Linux systems
 #
-# Usage: sudo bash LinuxSystemDoctor.sh
+# Usage: sudo bash LinuxSysDr.sh
 #
-# Author: CWRip / SeaDubRip
+# Author: SeaRipDev
 # Version: 1.0
 # Date: 2025-11-25
 #
@@ -16,10 +16,10 @@
 
 # Script configuration
 SCRIPT_VERSION="1.0"
-LOG_DIR="/var/log/system-doctor"
+LOG_DIR="/var/log/linuxsysdr"
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 LOG_FILE="$LOG_DIR/check-$TIMESTAMP.log"
-BACKUP_DIR="/root/system-doctor-backup"
+BACKUP_DIR="/root/linuxsysdr-backup"
 
 # Counters for issues
 ISSUES_FOUND=0
@@ -144,7 +144,7 @@ create_log_dir() {
         else
             print_warning "Could not create log directory. Logging to /tmp"
             LOG_DIR="/tmp"
-            LOG_FILE="$LOG_DIR/system-doctor-$TIMESTAMP.log"
+            LOG_FILE="$LOG_DIR/linuxsysdr-$TIMESTAMP.log"
         fi
     fi
 }
@@ -489,7 +489,7 @@ cleanup_disk_space() {
 ####################################################################################################
 
 show_menu() {
-    print_header "Linux System Doctor v$SCRIPT_VERSION"
+    print_header "LinuxSysDr v$SCRIPT_VERSION"
     echo ""
     echo "What would you like to do?"
     echo ""
@@ -532,7 +532,7 @@ run_full_repair() {
 }
 
 show_summary() {
-    print_header "System Doctor Summary"
+    print_header "LinuxSysDr Summary"
     echo ""
     print_info "Hostname: $(hostname)"
     print_info "Uptime: $(uptime -p 2>/dev/null || uptime)"
@@ -577,7 +577,7 @@ while true; do
         9) run_full_repair ;;
         0)
             show_summary
-            print_color "$GREEN" "Thank you for using Linux System Doctor!"
+            print_color "$GREEN" "Thank you for using LinuxSysDr!"
             exit 0
             ;;
         *)
